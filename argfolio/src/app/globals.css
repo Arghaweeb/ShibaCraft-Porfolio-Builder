@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+:root  {
+  --background: 260 100% 100%;
+  --foreground: 260 5% 10%;
+  --card: 260 50% 100%;
+  --card-foreground: 260 5% 15%;
+  --popover: 260 100% 100%;
+  --popover-foreground: 260 100% 10%;
+  --primary: 260 71% 43%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 260 30% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 222 30% 95%;
+  --muted-foreground: 260 5% 40%;
+  --accent: 222 30% 90%;
+  --accent-foreground: 260 5% 15%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 260 5% 100%;
+  --border: 260 30% 82%;
+  --input: 260 30% 50%;
+  --ring: 260 71% 43%;
+  --radius: 0.3rem;
+}
+.dark  {
+  --background: 260 50% 10%;
+  --foreground: 260 5% 100%;
+  --card: 260 50% 10%;
+  --card-foreground: 260 5% 100%;
+  --popover: 260 50% 5%;
+  --popover-foreground: 260 5% 100%;
+  --primary: 260 71% 43%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 260 30% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 222 30% 25%;
+  --muted-foreground: 260 5% 65%;
+  --accent: 222 30% 25%;
+  --accent-foreground: 260 5% 95%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 260 5% 100%;
+  --border: 260 30% 50%;
+  --input: 260 30% 50%;
+  --ring: 260 71% 43%;
+  --radius: 0.3rem;
+}
+
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+* {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+  box-sizing: border-box;
+}
