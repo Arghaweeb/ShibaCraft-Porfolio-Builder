@@ -93,23 +93,23 @@ export const updateCurrentUser = async (userData: any) => {
   }
 };
 
-export const getUserProfileById = async (id: string) => {
-  try {
-    const { data, error } = await supabase
-      .from("user_profiles")
-      .select()
-      .eq("id", id);
-    if (error) {
-      throw new Error("Error fetching user data");
-    }
-    return {
-      success: true,
-      data: data[0],
-    };
-  } catch (error: any) {
-    return {
-      success: false,
-      error: error.message,
-    };
-  }
-};
+// export const getUserProfileById = async (id: string) => {
+//   try {
+//     const { data, error } = await supabase
+//       .from("user_profiles")
+//       .select()
+//       .eq("id", id);
+//     if (error) {
+//       throw new Error("Error fetching user data");
+//     }
+//     return {
+//       success: true,
+//       data: data[0],
+//     };
+//   } catch (error: any) {
+//     return {
+//       success: false,
+//       error: error.message,
+//     };
+//   }
+// };
