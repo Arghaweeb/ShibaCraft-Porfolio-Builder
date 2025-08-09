@@ -21,7 +21,7 @@ function SignOutButton() {
   };
 
   return (
-    <Button disabled={loading} onClick={onSignOut}>
+    <Button disabled={loading} onClick={onSignOut} className="w-full">
       Signout
     </Button>
   );
