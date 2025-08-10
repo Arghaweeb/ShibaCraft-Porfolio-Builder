@@ -29,7 +29,9 @@ function PrivateLayout({ children }: { children: React.ReactNode }) {
   };
 
   useEffect(() => {
-    fetchUser();
+    if (!user) {
+      fetchUser();
+    }
   }, []);
 
   if (loading) {
