@@ -1,5 +1,5 @@
 "use client";
-import React, { use } from "react";
+import React, { use, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
 import {
@@ -27,10 +27,12 @@ const menuItems = [
     path: "/contact",
   },
 ];
-function Homepage() {
+
+function HomepageContent() {
   const [openSheet, setOpenSheet] = React.useState(false);
-  const searchparams: any = useSearchParams();
+  const searchparams = useSearchParams();
   const formType = searchparams.get("formType");
+  
   return (
     <div className="flex flex-col min-h-screen">
       <div
@@ -89,4 +91,14 @@ function Homepage() {
   );
 }
 
+function Homepage() {
+  return (
+    <Suspense fallback={<div className="flex justify-center items-center min-h-screen">Loading...</div>}>
+      <HomepageContent />
+    </Suspense>
+  );
+}
+
 export default Homepage;
+
+
