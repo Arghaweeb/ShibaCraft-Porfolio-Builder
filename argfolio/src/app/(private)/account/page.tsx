@@ -31,6 +31,7 @@ async function getUserPortfolioData(clerkUserId: string) {
         hasExperiences: false,
         hasEducations: false,
         hasConfiguration: false,
+        // Use Clerk ID as fallback if no profile exists
         portfolioUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio/${clerkUserId}`,
         userNotFound: true
       };
@@ -88,7 +89,8 @@ async function getUserPortfolioData(clerkUserId: string) {
       hasExperiences,
       hasEducations,
       hasConfiguration,
-      portfolioUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio/${clerkUserId}`,
+      // Use the Supabase user ID for the portfolio URL
+      portfolioUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/portfolio/${userId}`,
       userProfile,
       userNotFound: false
     };

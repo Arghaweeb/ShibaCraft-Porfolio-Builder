@@ -54,6 +54,7 @@ function ConfigurationPage() {
       });
       if (response.success) {
         toast.success(response.message);
+        router.push("/account");
       } else {
         toast.error(response.message);
       }

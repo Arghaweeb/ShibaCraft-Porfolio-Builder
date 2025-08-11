@@ -9,6 +9,7 @@ interface PortfolioActionsProps {
 }
 
 export default function PortfolioActions({ portfolioUrl }: PortfolioActionsProps) {
+  console.log("Generated portfolio URL:", portfolioUrl);
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
